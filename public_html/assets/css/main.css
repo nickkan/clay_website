@@ -3333,6 +3333,20 @@ body.is-loading #banner:after {
   text-align: center;
 }
 
+#main.schedule > header {
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../img/schedule.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../img/schedule.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../img/schedule.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../img/schedule.jpg");
+}
+
+#main.bible-study > header {
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../img/biblestudybanner.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../img/biblestudybanner.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../img/biblestudybanner.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../img/biblestudybanner.jpg");
+}
+
 #main > header h2 {
   font-size: 1.75em;
   margin: 0 0 0.5em 0;
@@ -3487,4 +3501,57 @@ body.is-mobile.landing .wrapper.style4 {
 
 body.is-mobile.landing #footer {
   background-color: #1d242a;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+
+.flex-item {
+  background: #E3E3E3;
+  padding: 10px 20px;
+  width: 30%;  
+  /*width: calc(100% / 3);*/
+  height: auto;
+  margin: 30px 10px;
+  
+  line-height: 15px;
+  color: black;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: none;
+}
+
+.flex-item a {
+  border-bottom: none;
+}
+
+.flex-item:hover {
+  background: #D5D5D5;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+.flex-item .bible-study-date {
+  font-size: 0.7em;
+}
+
+.flex-item .bible-study-chapter {
+  margin: auto;
+  font-size: 1.2em;
+  height: 150px;
+  line-height: 150px;
 }
