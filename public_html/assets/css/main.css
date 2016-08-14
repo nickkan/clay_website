@@ -2225,6 +2225,31 @@ button:disabled,
   }
 }
 
+
+/* Missions */
+
+.slab-image {
+    display: block;
+    width: 100%;
+    max-height: auto; 
+        margin: 2em 0;
+    /* min-height: 120px; */
+}
+
+.slab-image img{
+    max-width: 100%;
+    height: auto;
+}
+
+.slab-image h6{
+  color: #aaa;
+  text-align: center;
+}
+
+.missions p{
+  line-height: 200%;
+}
+
 /* Spotlight */
 .spotlight {
   -moz-align-items: center;
@@ -2359,14 +2384,19 @@ button:disabled,
   margin: 0 auto;
 }
 
+.wrapper > .missions {
+  width: 50em;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 1280px) {
-  .wrapper > .inner {
+  .wrapper > .inner, .wrapper > .missions {
     width: 90%;
   }
 }
 
 @media screen and (max-width: 980px) {
-  .wrapper > .inner {
+  .wrapper > .inner, .wrapper > .missions {
     width: 100%;
   }
 }
