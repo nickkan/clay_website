@@ -1666,7 +1666,7 @@ input[type="radio"] + label:before {
 
 @media screen and (max-width: 736px) {
   .icon.major {
-    font-size: 1em;
+    /*font-size: 1em;*/
   }
 }
 
@@ -1786,7 +1786,7 @@ ul.icons.major li {
 
 @media screen and (max-width: 736px) {
   ul.icons.major li {
-    padding: 0 1em !important;
+    /*padding: 0 1em !important;*/
   }
 }
 
@@ -2124,6 +2124,10 @@ button:disabled,
   padding-bottom: 1em;
 }
 
+.features .icon-div{
+    margin: 0 auto;
+}
+
 .features li p{
   font-size: 0.85em;
 }
@@ -2215,6 +2219,9 @@ button:disabled,
   }
   .features li:first-child {
     border-top: 0;
+  }
+  .features li img{
+    width: 25%;
   }
 }
 
@@ -3345,6 +3352,10 @@ body.is-loading #banner:after {
   background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../img/biblestudybanner.jpg");
   background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../img/biblestudybanner.jpg");
   background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../img/biblestudybanner.jpg");
+}
+
+#main.bible-study.small p{
+  font-size: 0.8em;
 }
 
 #main > header h2 {
