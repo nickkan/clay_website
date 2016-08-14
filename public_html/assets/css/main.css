@@ -1624,7 +1624,7 @@ input[type="radio"] + label:before {
 .icon {
   text-decoration: none;
   border-bottom: none;
-  position: relative;
+  /*position: relative;*/
 }
 
 .icon:before {
@@ -3520,12 +3520,12 @@ body.is-mobile.landing #footer {
 }
 
 .flex-item {
-  background: #E3E3E3;
-  padding: 10px 20px;
+  /*background: #E3E3E3;*/
+  /*padding: 10px 20px;*/
+  /*margin: 30px 10px;*/
+
   width: 30%;  
-  /*width: calc(100% / 3);*/
   height: auto;
-  margin: 30px 10px;
   
   line-height: 15px;
   color: black;
@@ -3538,12 +3538,11 @@ body.is-mobile.landing #footer {
   border-bottom: none;
 }
 
-.flex-item:hover {
+/*.flex-item:hover {
   background: #D5D5D5;
   cursor: pointer;
   text-decoration: underline;
-}
-
+}*/
 
 .flex-item .bible-study-date {
   font-size: 0.7em;
@@ -3554,4 +3553,440 @@ body.is-mobile.landing #footer {
   font-size: 1.2em;
   height: 150px;
   line-height: 150px;
+}
+
+.series{
+  margin-top: 5em;
+}
+
+/* =============================== */
+/*              GRIDS              */
+/* =============================== */
+
+.Grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.u-textCenter {
+  text-align: center;
+}
+
+.Grid-cell {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.Demo {
+  padding: .8em 1em 0;
+  margin-bottom: 1em;
+  background: rgba(51, 153, 204, 0.2);
+  transition: background-color 0.3s ease;
+  border: 1px solid #33cccc;
+  border-radius: 3px;
+}
+
+.Demo:after {
+  content: "";
+  display: block;
+  margin-top: .8em;
+  height: 1px;
+}
+
+.Demo:hover {
+  background: rgba(51, 153, 204, 0.5);
+}
+
+.Demo.Holy {
+  background: rgba(102, 51, 255, 0.1);
+}
+
+.Demo.Holy:hover {
+  background: rgba(102, 51, 255, 0.25);
+}
+
+.Empty {
+  display: none;
+/*  padding: .8em 1em 0;
+  margin-bottom: 1em;
+  background: rgba(51, 153, 204, 0.2);
+  transition: background-color 0.3s ease;
+  border: 1px solid #33cccc;
+  border-radius: 3px;*/
+}
+
+/* With gutters*/
+.Grid--gutters {
+  margin-left: -1em;
+}
+
+.Grid--gutters .Grid-cell {
+  padding-left: 1em;
+}
+
+.Grid--gutters .Grid--nested .Grid-cell:first-of-type .Demo {
+  margin-right: 1em;
+}
+
+/* No gutters*/
+.Grid--gutters-none {
+  margin-left: 0em;
+}
+
+.Grid--gutters-none .Grid-cell-none {
+  padding-left: 0em;
+  margin-top: -1.05em;
+  margin-bottom: -0.05em;
+}
+
+.Grid--gutters-none .Grid--nested-none .Grid-cell-none:first-of-type .Demo {
+  margin-right: 0;
+}
+
+/* Justify per row*/
+.Grid--right {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.Grid--center {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Alignment per row */
+.Grid--top {
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.Grid--bottom {
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.Grid--center {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Alignment per cell */
+.Grid-cell--top {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+}
+
+.Grid-cell--bottom {
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+
+.Grid-cell--center {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+
+.navigation {
+  list-style: none;
+  /*background: deepskyblue;*/
+  background: rgba(102, 51, 255, 0.1);
+  margin: 0 0 1em;
+  border: 1px solid #33cccc;
+  border-radius: 3px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: #333;
+}
+
+.navigation a:hover {
+  background: rgba(64, 0, 255, 0.1);
+  border-radius: 3px;
+}
+
+.navigation:hover {
+  background: rgba(102, 51, 255, 0.25);
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+/*===========================================*/
+/* Base classes for all media - Mobile first */
+.Grid--cols-2 > .Grid-cell {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  /* flex: 0 0 calc(50% - 0em); */
+}
+
+.Grid--cols-2 > .Grid-cell-none {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  /* flex: 0 0 calc(50% - 0em); */
+}
+
+.Grid--cols-3 > .Grid-cell {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.Grid--cols-3 > .Grid-cell-none {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.Grid--cols-4 > .Grid-cell {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.Grid--cols-4 > .Grid-cell-none {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.Grid--cols-6 > .Grid-cell {
+  -webkit-flex: 0 0 calc(50% - 0em);
+      -ms-flex: 0 0 calc(50% - 0em);
+          flex: 0 0 calc(50% - 0em);
+}
+
+.Grid--cols-12 > .Grid-cell {
+  -webkit-flex: 0 0 calc(33.3333% - 0em);
+      -ms-flex: 0 0 calc(33.3333% - 0em);
+          flex: 0 0 calc(33.3333% - 0em);
+}
+
+.Grid--Holy-grail .aside, .Grid--Holy-grail .main {
+  -webkit-flex: 1 100%;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+}
+
+/* One of -- columns*/
+.Grid--1of2 > .Grid-cell,
+.Grid--1of4 > .Grid-cell:first-of-type,
+.Grid--1of3 > .Grid-cell:first-of-type {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.Grid--1of6 > .Grid-cell:first-of-type {
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.Grid--fit > .Grid-cell {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.Grid--full > .Grid-cell {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+/* Tablet (medium) screens */
+@media (min-width: 30em) {
+  /*
+  .Grid--cols-2 > .Grid-cell {
+    flex: 0 0 calc(50% - 0em);     
+  }
+  .Grid--cols-2 > .Grid-cell-none {
+    flex: 0 0 calc(50% - 0em);     
+  }
+  */
+  .Grid--cols-4 > .Grid-cell {
+    -webkit-flex: 0 0 calc(50% - 0em);
+        -ms-flex: 0 0 calc(50% - 0em);
+            flex: 0 0 calc(50% - 0em);
+  }
+  .Grid--cols-4 > .Grid-cell-none {
+    -webkit-flex: 0 0 calc(50% - 0em);
+        -ms-flex: 0 0 calc(50% - 0em);
+            flex: 0 0 calc(50% - 0em);
+  }
+  .Grid--cols-6 > .Grid-cell {
+    -webkit-flex: 0 0 calc(33.3333% - 0em);
+        -ms-flex: 0 0 calc(33.3333% - 0em);
+            flex: 0 0 calc(33.3333% - 0em);
+  }
+  .Grid--cols-12 > .Grid-cell {
+    -webkit-flex: 0 0 calc(16.6666% - 0em);
+        -ms-flex: 0 0 calc(16.6666% - 0em);
+            flex: 0 0 calc(16.6666% - 0em);
+  }
+  .Grid--Holy-grail .aside {
+    -webkit-flex: 1 calc(25% - 0em);
+        -ms-flex: 1 calc(25% - 0em);
+            flex: 1 calc(25% - 0em);
+  }
+  .Grid--1of2 > .Grid-cell {
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .Grid--1of2 > .Grid-cell-none {
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .Grid--1of6 > .Grid-cell:first-of-type {
+    -webkit-flex: 0 0 30%;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+  .Grid--1of4 > .Grid-cell:first-of-type {
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .Grid--1of3 > .Grid-cell:first-of-type {
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 48em) {
+  .sideImage {
+    display: none;
+  }
+  .inner {
+    width: 100%;
+  }
+}
+
+/* Large screens */
+@media (min-width: 48em) {
+  .Grid--cols-2 > .Grid-cell,
+  .Grid--cols-2 > .Grid-cell-none,
+  .Grid--cols-3 > .Grid-cell,
+  .Grid--cols-3 > .Grid-cell-none,
+  .Grid--cols-4 > .Grid-cell,
+  .Grid--cols-4 > .Grid-cell-none,
+  .Grid--cols-6 > .Grid-cell,
+  .Grid--cols-12 > .Grid-cell {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .Grid--Holy-grail .main {
+    -webkit-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+  .Grid--Holy-grail .aside {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .Grid--Holy-grail fcol
+.aside-1 {
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .Grid--Holy-grail .main {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .Grid--Holy-grail .aside-2 {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .Grid--1of2 > .Grid-cell {
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .Grid--1of2 > .Grid-cell-none {
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .Grid--1of6 > .Grid-cell:first-of-type {
+    -webkit-flex: 0 0 16.6666%;
+        -ms-flex: 0 0 16.6666%;
+            flex: 0 0 16.6666%;
+  }
+  .Grid--1of4 > .Grid-cell:first-of-type {
+    -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+  }
+  .Grid--1of3 > .Grid-cell:first-of-type {
+    -webkit-flex: 0 0 30%;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+  .Grid--3of4 > .Grid-cell:first-of-type {
+    -webkit-flex: 0 0 75%;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
+  }
+  .Grid--gutters.Grid--nested .Grid-cell:first-of-type .Demo {
+    margin-right: 0;
+  }
 }
