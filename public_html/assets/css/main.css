@@ -2232,13 +2232,16 @@ button:disabled,
     display: block;
     width: 100%;
     max-height: auto; 
-        margin: 2em 0;
+    margin: 2em 0;
     /* min-height: 120px; */
 }
 
 .slab-image img{
+    display: block;
     max-width: 100%;
     height: auto;
+    margin: auto;
+    padding: 1em 0;
 }
 
 .slab-image h6{
